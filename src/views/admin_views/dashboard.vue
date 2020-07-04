@@ -121,7 +121,7 @@
                   <br>
                   <img
                      v-if="getWelcome.length != 0"
-                    :src="'http://apix.epizy.com/ftpimages/image_27.JPEG'"
+                    :src="'https://ietraders.herokuapp.com/:http://apix.epizy.com/ftpimages/image_27.JPEG'"
                     class="welcome_image"
                     alt
                   />
