@@ -117,14 +117,14 @@
                   />
 
                   <br>
-                  <!-- fecth from serever
+                  fecth from serever
                   <br>
                   <img
                      v-if="getWelcome.length != 0"
-                    :src="'http://apix.epizy.com/ftpimages/' + this.getWelcome[0].display[0].Image"
+                    :src="'http://apix.epizy.com/ftpimages/image_27.jpeg'"
                     class="welcome_image"
                     alt
-                  /> -->
+                  />
                   <!-- <img
                     v-if="getWelcome.length === 0"
                     src="../../assets/welcome.jpg"
