@@ -24,6 +24,12 @@
               class="welcome_image"
               alt
             ></v-img>
+            testing
+            <v-img
+              :src="'http://landingsiteone.epizy.com/public/ftpimages/' + getItem[0].Image+'?i=1'"
+              class="welcome_image"
+              alt
+            ></v-img>
           </div>
 
           <div class="col-xl-6 pl-5 pr-5">
