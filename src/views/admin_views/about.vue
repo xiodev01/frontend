@@ -92,7 +92,7 @@
                     <!-- <img src="../../assets/welcome.jpg" class="welcome_image" alt /> -->
                     <img
                        
-                      :src="'http://landingsiteone.epizy.com/public/ftpimages/' + this.getAbout[0].display[0].CompanyImage"
+                      :src="'http://localhost:8000/storage/' + this.getAbout[0].display[0].CompanyImage"
                       class="welcome_image"
                       alt
                     />

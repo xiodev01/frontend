@@ -248,7 +248,9 @@ export default {
         this.$http.post(uri, store).then(response => {
           this.successMessage = response.data;
           //console.log.log("saved");
-          this.snackbar = true;
+          this.color = "success";
+        this.text = "Message Sent";
+        this.snackbar = true;
           //console.log.log(response.data);
 
           this.Form = {
