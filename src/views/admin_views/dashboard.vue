@@ -111,7 +111,7 @@
                 <v-expansion-panel-content>
                   <img
                      
-                    :src="'https://ietraders.herokuapp.comhttp://apix.epizy.com/ftpimages/' + this.getWelcome[0].display[0].Image"
+                    :src="'http://landingsiteone.epizy.com/public/ftpimages/' + this.getWelcome[0].display[0].Image"
                     class="welcome_image"
                     alt
                   />
