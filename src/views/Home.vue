@@ -20,7 +20,7 @@
           >
             <!-- <img src="../assets/welcome.jpg" class="welcome_image" alt /> -->
             <v-img
-              :src="'http://landingsiteone.epizy.com/public/ftpimages/' + getItem[0].Image"
+              :src="'http://landingsiteone.epizy.com/public/ftpimages/' + getItem[0].Image+'?i=1'"
               class="welcome_image"
               alt
             ></v-img>
