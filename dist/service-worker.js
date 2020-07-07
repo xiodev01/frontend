@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.793c3d353eb12230da4743f1bb9fff10.js"
+  "/precache-manifest.fb25eeb791e4d545d92a032150c5e1ef.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "landig_site"});

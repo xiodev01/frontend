@@ -100,7 +100,7 @@ export default {
     },
     FormCSRUpdate() {
       if (this.editorData) {
-         this.color = "info";
+         this.color = "warning";
       this.text = "Loading...";
       this.snackbar = true;
         this.text = "Information Has Been Saved Successfully";
@@ -118,6 +118,7 @@ export default {
           this.getCSR.splice(0);
           this.initialize();
           this.snackbar = true;
+
         });
 
         this.showCSREDIT = false;

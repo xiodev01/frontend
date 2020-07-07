@@ -27,15 +27,40 @@ export default {
   },
   actions: {
     //
-    signIn({ dispatch }, cradentials) {
+    signIn({ dispatch }, cradentials,) {
       let uri = "auth/signin";
+      // console.log(this.overlay)
       axios
-        .post("http://127.0.0.1:8000/auth/signin", cradentials)
+        .post("https://importexporttraders.herokuapp.com/auth/signin", cradentials)
         .then(response => {
           //console.log.log("Logged in");
-          //   //console.log.log(response.data);
+            // console.log(response.data.token);
+
+            
 
           return dispatch("attempt", response.data.token);
+        }) .catch(function (error) {
+
+          console.log(error.response.data.error)
+
+          if (error.response.data.error) {
+            alert('Login Failed. Please try again')
+          }
+
+          // if (error.response) {
+          //   console.log(error.response.status); 
+
+          //   if (error.response.status === 401) {
+          //     alert('true')
+          //   }
+           
+
+          //   this.overlay = false; 
+          // } else {
+          //   console.log('error', error.message);
+          //   this.overlay = false;
+           
+          // }
         });
     },
 
@@ -48,12 +73,16 @@ export default {
         } else {
           return;
         }
-        axios.get("http://127.0.0.1:8000/auth/signme").then(function(response) {
+        axios.get("https://importexporttraders.herokuapp.com/auth/signme").then(function(response) {
           //console.log.log("login");
           //console.log.log(response.data);
 
           commit("SET_USER", response.data);
           router.push("/admin_dashboard");
+          
+          
+        
+          // alert('login')
         });
       } catch (e) {
         commit("SET_TOKEN", null);
@@ -62,7 +91,7 @@ export default {
     },
 
     signOut({ commit }) {
-      axios.post("http://127.0.0.1:8000/auth/signout").then(function(response) {
+      axios.post("https://importexporttraders.herokuapp.com/auth/signout").then(function(response) {
         //console.log.log("logged out");
         //console.log.log(response.data);
         commit("SET_TOKEN", null);

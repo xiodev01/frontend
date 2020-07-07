@@ -92,7 +92,7 @@
                     <!-- <img src="../../assets/welcome.jpg" class="welcome_image" alt /> -->
                     <img
                        
-                      :src="'http://apix.epizy.com/ftpimages/' + this.getAbout[0].display[0].CompanyImage"
+                      :src="'http://landingsiteone.epizy.com/public/ftpimages/' + this.getAbout[0].display[0].CompanyImage"
                       class="welcome_image"
                       alt
                     />
@@ -544,7 +544,7 @@ export default {
         CompanyDescription: this.Form.DescribeAbout,
         CompanyImage: this.MultiFile
       };
-      this.color = "info";
+      this.color = "warning";
       this.text = "Loading...";
       this.snackbar = true;
       let uri = "About/1";
@@ -554,6 +554,9 @@ export default {
         //console.log(response.data.result);
         this.getAbout.splice(0);
         this.initialize();
+        this.snackbar = true;
+         this.color = "success";
+        this.text = "Information Has Been Saved Successfully";
         this.snackbar = true;
       });
       this.dialog_About_section = false; //console.log(update);
@@ -563,7 +566,7 @@ export default {
       const update = {
         Mession: this.Form.DescribeMission
       };
-      this.color = "info";
+      this.color = "warning";
       this.text = "Loading...";
       this.snackbar = true;
       let uri = "About/1";
@@ -573,6 +576,9 @@ export default {
         //console.log(response.data.result);
         this.getAbout.splice(0);
         this.initialize();
+        this.snackbar = true;
+         this.color = "success";
+        this.text = "Information Has Been Saved Successfully";
         this.snackbar = true;
       });
       this.dialog_Mission_section = false; //console.log(update);
@@ -582,7 +588,7 @@ export default {
       const update = {
         Vission: this.Form.DescribeVission
       };
-       this.color = "info";
+       this.color = "warning";
       this.text = "Loading...";
       this.snackbar = true;
       let uri = "About/1";
@@ -592,6 +598,9 @@ export default {
         //console.log(response.data.result);
         this.getAbout.splice(0);
         this.initialize();
+        this.snackbar = true;
+         this.color = "success";
+        this.text = "Information Has Been Saved Successfully";
         this.snackbar = true;
       });
       this.dialog_Vision_section = false; //console.log(update);
@@ -601,7 +610,7 @@ export default {
       const update = {
         Enviroment: this.Form.Enviroment
       };
-      this.color = "info";
+      this.color = "warning";
       this.text = "Loading...";
       this.snackbar = true;
       let uri = "About/1";
@@ -611,6 +620,9 @@ export default {
         //console.log(response.data.result);
         this.getAbout.splice(0);
         this.initialize();
+        this.snackbar = true;
+         this.color = "success";
+        this.text = "Information Has Been Saved Successfully";
         this.snackbar = true;
       });
       this.dialog_Enviroment_section = false; //console.log(update);
@@ -620,7 +632,7 @@ export default {
       const update = {
         EmployeeProgressNote: this.Form.EmployeeProgressNote
       };
-       this.color = "info";
+       this.color = "warning";
       this.text = "Loading...";
       this.snackbar = true;
       let uri = "About/1";
@@ -631,6 +643,9 @@ export default {
         this.getAbout.splice(0);
         this.initialize();
         this.snackbar = true;
+         this.color = "success";
+        this.text = "Information Has Been Saved Successfully";
+        this.snackbar = true;
       });
       this.dialog_EProgress_section = false; //console.log(update);
     },
@@ -639,7 +654,7 @@ export default {
       const update = {
         OurPeopleNote: this.Form.OurPeople
       };
-      this.color = "info";
+      this.color = "warning";
       this.text = "Loading...";
       this.snackbar = true;
       let uri = "About/1";
@@ -649,6 +664,9 @@ export default {
         //console.log(response.data.result);
         this.getAbout.splice(0);
         this.initialize();
+        this.snackbar = true;
+         this.color = "success";
+        this.text = "Information Has Been Saved Successfully";
         this.snackbar = true;
       });
       this.dialog_People_section = false; //console.log(update);

@@ -110,21 +110,20 @@
 
                 <v-expansion-panel-content>
                   <img
-                     
                     :src="'http://landingsiteone.epizy.com/public/ftpimages/' + this.getWelcome[0].display[0].Image"
                     class="welcome_image"
                     alt
                   />
 
-                  <br>
-                  fecth from serever
+                  <br />
+                  <!-- fecth from serever
                   <br>
                   <img
                      v-if="getWelcome.length != 0"
                     :src="'http://apix.epizy.com/ftpimages/image_28.jpeg'"
                     class="welcome_image"
                     alt
-                  />
+                  />-->
                   <!-- <img
                     v-if="getWelcome.length === 0"
                     src="../../assets/welcome.jpg"
@@ -387,7 +386,8 @@ export default {
         Image: this.MultiFile
         // DescribeProduct: this.WelcomeForm.ActiveExport,
         // DescribeServices: this.WelcomeForm.Description,
-      }; this.color = "info";
+      };
+      this.color = "warning";
       this.text = "Loading...";
       this.snackbar = true;
 
@@ -398,6 +398,9 @@ export default {
         // //console.log.log(response.data.result);
         this.getWelcome.splice(0);
         this.initialize();
+        this.snackbar = true;
+        this.color = "success";
+        this.text = "Information Has Been Saved Successfully";
         this.snackbar = true;
       });
       // this.getWelcome.push(response.data)
@@ -408,7 +411,8 @@ export default {
     UpdateProductForm() {
       const update = {
         DescribeProduct: this.WelcomeForm.DescribeProduct
-      }; this.color = "info";
+      };
+      this.color = "warning";
       this.text = "Loading...";
       this.snackbar = true;
       let uri = "Welcome/1";
@@ -419,6 +423,9 @@ export default {
         this.getWelcome.splice(0);
         this.initialize();
         this.snackbar = true;
+         this.color = "success";
+        this.text = "Information Has Been Saved Successfully";
+        this.snackbar = true;
       });
 
       this.dialog_products = false;
@@ -427,7 +434,8 @@ export default {
     UpdateFormServices() {
       const update = {
         DescribeServices: this.WelcomeForm.Services
-      }; this.color = "info";
+      };
+      this.color = "warning";
       this.text = "Loading...";
       this.snackbar = true;
       let uri = "Welcome/1";
@@ -437,6 +445,9 @@ export default {
         // //console.log.log(response.data.result);
         this.getWelcome.splice(0);
         this.initialize();
+        this.snackbar = true;
+         this.color = "success";
+        this.text = "Information Has Been Saved Successfully";
         this.snackbar = true;
       });
 

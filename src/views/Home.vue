@@ -20,7 +20,7 @@
           >
             <!-- <img src="../assets/welcome.jpg" class="welcome_image" alt /> -->
             <v-img
-              :src="'http://apix.epizy.com/ftpimages/' + getItem[0].Image"
+              :src="'http://landingsiteone.epizy.com/public/ftpimages/' + getItem[0].Image"
               class="welcome_image"
               alt
             ></v-img>
@@ -109,7 +109,7 @@
               width="250"
               @click="ViewSingleProduct(items)"
             >
-              <v-img :src="'http://apix.epizy.com/ftpimages/' + items.image[0]['img']" width="100%"></v-img>
+              <v-img :src="'http://landingsiteone.epizy.com/public/ftpimages/' + items.image[0]['img']" width="100%"></v-img>
 
               <v-card-text>
                 <div>{{items.Name}}</div>
@@ -152,7 +152,7 @@
                         <div class="col-xl-6">
                           <!-- <v-img src="../assets/services-banner.jpg" width="100%"></v-img> -->
                           <v-img
-                            :src="'http://apix.epizy.com/ftpimages/' + getEditItem[0].image[0].img"
+                            :src="'http://landingsiteone.epizy.com/public/ftpimages/' + getEditItem[0].image[0].img"
                             class="SingleImageSize"
                           ></v-img>
 
@@ -162,7 +162,7 @@
                             <div class="col-xl-12">
                               <div v-for="(items,index) in getEditItem[0].image" :key="index">
                                 <v-img
-                                  :src="'http://apix.epizy.com/ftpimages/' + items.img"
+                                  :src="'http://landingsiteone.epizy.com/public/ftpimages/' + items.img"
                                   class="SingleImageSizeCollection"
                                 ></v-img>
                               </div>

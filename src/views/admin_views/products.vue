@@ -270,7 +270,7 @@
                                   :key="index"
                                 >
                                   <v-list-item-avatar>
-                                    <v-img :src="'http://apix.epizy.com/ftpimages/' + item.img"></v-img>
+                                    <v-img :src="'http://landingsiteone.epizy.com/public/ftpimages/' + item.img"></v-img>
                                   </v-list-item-avatar>
                                   <v-list-item-content>
                                     <v-list-item-title></v-list-item-title>
@@ -330,8 +330,8 @@
 
                   <v-list-item>
                     <v-list-item-avatar>
-                      <v-img :src="'http://apix.epizy.com/ftpimages/' + item.Image['img']"></v-img>
-                      <!-- :src="'http://apix.epizy.com/ftpimages/' + items.image_name" -->
+                      <v-img :src="'http://landingsiteone.epizy.com/public/ftpimages/' + item.Image['img']"></v-img>
+                      <!-- :src="'http://landingsiteone.epizy.com/public/ftpimages/' + items.image_name" -->
                     </v-list-item-avatar>
                   </v-list-item>
                 </template>

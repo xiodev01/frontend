@@ -1000,7 +1000,7 @@ export default {
         Contact_Activate_Contact_Form: this.Activate_contact_Form,
         Contact_Activate_Map: this.Activate_Map
       };
-       this.color = "info";
+       this.color = "warning";
       this.text = "Loading...";
       this.snackbar = true;
       let uri = "Adjestments/1";

@@ -1,6 +1,31 @@
 <template>
   <v-app id="inspire">
     <v-content>
+      <!-- <v-row align="center" justify="center">
+    <v-card height="300" width="250">
+      <v-row justify="center">
+        <v-btn
+          color="success"
+          class="mt-12"
+          @click="overlay = !overlay"
+        >
+          Show Overlay
+        </v-btn>
+
+        <v-overlay
+          :absolute="absolute"
+          :value="overlay"
+        >
+          <v-btn
+            color="success"
+            @click="overlay = false"
+          >
+            Hide Overlay
+          </v-btn>
+        </v-overlay>
+      </v-row>
+    </v-card>
+      </v-row>-->
       <v-container class="fill-height" fluid>
         <v-row align="center" justify="center">
           <v-col cols="12" sm="8" md="4">
@@ -19,6 +44,11 @@
               </v-toolbar>
               <v-toolbar color="red" v-if="errorMessage" dark flat>Invalid Login</v-toolbar>
               <v-card-text>
+                <v-overlay :absolute="absolute" :value="overlay">
+                  <v-progress-circular :size="70" :width="7" color="blue" indeterminate></v-progress-circular>
+                  <br />
+                  <v-btn color="success"  @click="overlay = false">Try Again</v-btn>
+                </v-overlay>
                 <v-form>
                   <v-text-field
                     label="Email"
@@ -78,6 +108,8 @@ export default {
   },
   data() {
     return {
+      absolute: true,
+      overlay: false,
       form: {
         email: "",
         password: ""
@@ -93,9 +125,20 @@ export default {
       signIn: "auth/signIn"
     }),
     loginDetails() {
+      // alert('login')
+      // this.overlay = true;
       this.signIn(this.form).then(() => {
-        this.$router.push({ path: "/admin_dashboard" });
-      });
+        // this.$router.push({ path: "/admin_dashboard" });
+        // alert('login')
+      }).catch(function (error) {
+
+          console.log(error)
+
+          if (error.response.data.error) {
+            console.log('Login Failed. Please try again')
+          };
+      })
+      // this.overlay= false
       // this.errorMessage=true
       // if ((this.email == "admin@gmail.com") & (this.password == "admin123")) {
       //   this.$router.push({ path: "/admin_dashboard" });
@@ -117,3 +160,8 @@ export default {
   }
 };
 </script>
+<style scoped>
+.v-progress-circular {
+  margin: 1rem;
+}
+</style>

@@ -319,7 +319,7 @@ export default {
         companyWorkingTime: this.companyTime
       };
       //console.log.log(update);
-       this.color = "info";
+       this.color = "warning";
       this.text = "Loading...";
       this.snackbar = true;
       let uri = "Settings/1";
@@ -328,6 +328,9 @@ export default {
         //console.log.log("saved About");
         // //console.log.log(response.data.result);
         this.initialize();
+        this.snackbar = true;
+         this.color = "success";
+        this.text = "Information Has Been Saved Successfully";
         this.snackbar = true;
       });
     },
@@ -338,7 +341,7 @@ export default {
       };
 
       //console.log.log(update) 
-      this.color = "info";
+      this.color = "warning";
       this.text = "Loading...";
       this.snackbar = true;
       let uri = "Settings/1";
@@ -348,11 +351,14 @@ export default {
         // //console.log.log(response.data.result);
         this.initialize();
         this.snackbar = true;
+         this.color = "success";
+        this.text = "Information Has Been Saved Successfully";
+        this.snackbar = true;
       });
     },
     SocialMediaUpdate() {
       //console.log.log("Soical Media pressed");
-       this.color = "info";
+       this.color = "warning";
       this.text = "Loading...";
       this.snackbar = true;
       const update = {
@@ -367,6 +373,9 @@ export default {
         //console.log.log("saved About");
         // //console.log.log(response.data.result);
         this.initialize();
+        this.snackbar = true;
+         this.color = "success";
+        this.text = "Information Has Been Saved Successfully";
         this.snackbar = true;
       });
     }
