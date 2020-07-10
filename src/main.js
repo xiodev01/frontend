@@ -13,8 +13,8 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import axios from 'axios'
 
 const base = axios.create({
-  // baseURL: 'https://importexporttraders.herokuapp.com/'
-  baseURL: 'http://localhost:8000/'
+  baseURL: 'https://importexporttraders.herokuapp.com/'
+  // baseURL: 'http://localhost:8000/'
 })
 
 Vue.prototype.$http = base

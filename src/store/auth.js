@@ -31,7 +31,8 @@ export default {
       let uri = "auth/signin";
       // console.log(this.overlay)
       axios
-        .post("http://localhost:8000/auth/signin", cradentials)
+        // .post("http://localhost:8000/auth/signin", cradentials)
+        .post("https://importexporttraders.herokuapp.com/", cradentials)
         .then(response => {
           //console.log.log("Logged in");
             // console.log(response.data.token);
@@ -73,7 +74,8 @@ export default {
         } else {
           return;
         }
-        axios.get("http://localhost:8000/auth/signme").then(function(response) {
+        // axios.get("http://localhost:8000/auth/signme").then(function(response) {
+        axios.get("https://importexporttraders.herokuapp.com/").then(function(response) {
           //console.log.log("login");
           //console.log.log(response.data);
 
@@ -91,7 +93,8 @@ export default {
     },
 
     signOut({ commit }) {
-      axios.post("http://localhost:8000/auth/signout").then(function(response) {
+      // axios.post("http://localhost:8000/auth/signout").then(function(response) {
+      axios.post("https://importexporttraders.herokuapp.com/").then(function(response) {
         //console.log.log("logged out");
         //console.log.log(response.data);
         commit("SET_TOKEN", null);
