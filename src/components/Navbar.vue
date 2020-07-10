@@ -8,8 +8,13 @@
 
         <b-navbar-brand v-if="getItem.length != 0">
           <!-- <img src="../assets/devi_trading_logo.png" class="logo_image" alt /> -->
+          <!-- <v-img
+            :src="'http://landingsiteone.epizy.com/ftpimages/' + getItem[0].companyLogo"
+            class="logo_image"
+            alt
+          ></v-img> -->
           <v-img
-            :src="'http://localhost:8000/storage/' + getItem[0].companyLogo"
+            :src="'http://landingsiteone.epizy.com/ftpimages/' + getItem[0].companyLogo+'?i=1'"
             class="logo_image"
             alt
           ></v-img>

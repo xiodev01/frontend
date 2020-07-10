@@ -45,7 +45,7 @@
               <template>
                 <v-card class="mx-auto" max-width="344">
                   <!-- <v-img src="../assets/e1.jpg" height="200px"></v-img> -->
-                  <v-img :src="'http://localhost:8000/storage/' + items.Image.img" height="200px"></v-img>
+                  <v-img :src="'http://landingsiteone.epizy.com/ftpimages/' + items.Image.img+'?i=1'" height="200px"></v-img>
 
                   <v-card-subtitle>
                     <!-- <v-btn text @click="dialog = true">{{items.Name}}</v-btn> -->
@@ -81,7 +81,7 @@
                         <div class="col-xl-6">
                           <!-- <v-img src="../assets/services-banner.jpg" width="100%"></v-img> -->
                           <v-img
-                            :src="'http://localhost:8000/storage/' + getEditItem[0].image[0].img"
+                            :src="'http://landingsiteone.epizy.com/ftpimages/' + getEditItem[0].image[0].img+'?i=1'"
                             class="SingleImageSize"
                           ></v-img>
 
@@ -91,7 +91,7 @@
                             <div class="col-xl-12">
                               <div v-for="(items,index) in getEditItem[0].image" :key="index">
                                 <v-img
-                                  :src="'http://localhost:8000/storage/' + items.img"
+                                  :src="'http://landingsiteone.epizy.com/ftpimages/' + items.img+'?i=1'"
                                   class="SingleImageSizeCollection"
                                 ></v-img>
                               </div>

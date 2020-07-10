@@ -110,7 +110,7 @@
 
                 <v-expansion-panel-content>
                   <img
-                    :src="'http://localhost:8000/storage/' + this.getWelcome[0].display[0].Image"
+                    :src="'http://landingsiteone.epizy.com/ftpimages/' + this.getWelcome[0].display[0].Image+'?i=1'"
                     class="welcome_image"
                     alt
                   />

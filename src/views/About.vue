@@ -29,7 +29,7 @@
             v-if="Activate[0].About_Activate_About_Image === 'true'"
           >
             <v-img
-              :src="'http://localhost:8000/storage/' + getItem[0].CompanyImage"
+              :src="'http://landingsiteone.epizy.com/ftpimages/' + getItem[0].CompanyImage+'?i=1'"
               class="welcome_image"
               alt
             ></v-img>

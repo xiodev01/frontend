@@ -19,11 +19,16 @@
             v-if="Activate[0].Home_Activate_Welcome_Image === 'true'"
           >
             <!-- <img src="../assets/welcome.jpg" class="welcome_image" alt /> -->
-            <v-img
-              :src="'http://localhost:8000/storage/' + getItem[0].Image+'?i=1'"
+            <!-- <v-img
+              :src="'http://landingsiteone.epizy.com/ftpimages/' + getItem[0].Image"
               class="welcome_image"
               alt
-            ></v-img>
+            ></v-img> -->
+             <img
+            :src="'http://landingsiteone.epizy.com/ftpimages/'+ getItem[0].Image+'?i=1'"
+            class="logo_image"
+            alt
+          > 
             
          
           </div>
@@ -111,7 +116,7 @@
               width="250"
               @click="ViewSingleProduct(items)"
             >
-              <v-img :src="'http://localhost:8000/storage/' + items.image[0]['img']" width="100%"></v-img>
+              <v-img :src="'http://landingsiteone.epizy.com/ftpimages/' + items.image[0]['img']+'?i=1'" width="100%"></v-img>
 
               <v-card-text>
                 <div>{{items.Name}}</div>
@@ -154,7 +159,7 @@
                         <div class="col-xl-6">
                           <!-- <v-img src="../assets/services-banner.jpg" width="100%"></v-img> -->
                           <v-img
-                            :src="'http://localhost:8000/storage/' + getEditItem[0].image[0].img"
+                            :src="'http://landingsiteone.epizy.com/ftpimages/' + getEditItem[0].image[0].img+'?i=1'"
                             class="SingleImageSize"
                           ></v-img>
 
@@ -164,7 +169,7 @@
                             <div class="col-xl-12">
                               <div v-for="(items,index) in getEditItem[0].image" :key="index">
                                 <v-img
-                                  :src="'http://localhost:8000/storage/' + items.img"
+                                  :src="'http://landingsiteone.epizy.com/ftpimages/' + items.img+'?i=1'"
                                   class="SingleImageSizeCollection"
                                 ></v-img>
                               </div>

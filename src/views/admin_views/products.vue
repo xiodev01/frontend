@@ -270,7 +270,7 @@
                                   :key="index"
                                 >
                                   <v-list-item-avatar>
-                                    <v-img :src="'http://localhost:8000/storage/' + item.img"></v-img>
+                                    <v-img :src="'http://landingsiteone.epizy.com/ftpimages/' + item.img+'?i=1'"></v-img>
                                   </v-list-item-avatar>
                                   <v-list-item-content>
                                     <v-list-item-title></v-list-item-title>
@@ -330,8 +330,8 @@
 
                   <v-list-item>
                     <v-list-item-avatar>
-                      <v-img :src="'http://localhost:8000/storage/' + item.Image['img']"></v-img>
-                      <!-- :src="'http://localhost:8000/storage/' + items.image_name" -->
+                      <v-img :src="'http://landingsiteone.epizy.com/ftpimages/' + item.Image['img']+'?i=1'"></v-img>
+                      <!-- :src="'http://landingsiteone.epizy.com/ftpimages/' + items.image_name" -->
                     </v-list-item-avatar>
                   </v-list-item>
                 </template>
